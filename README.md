@@ -59,6 +59,13 @@ Base URL: `http://localhost:5000/api`
 
 ### Endpoints
 
+#### Health Check
+```
+GET /health
+```
+- Base path: `http://localhost:5000/health`
+- Returns system status, timestamp, and version.
+
 #### Create Project
 ```
 POST /projects
