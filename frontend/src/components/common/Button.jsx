@@ -22,7 +22,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant] || variantClasses.primary} ${className}`}
       {...props}
     >
       {icon && <span className="material-icons text-[20px]">{icon}</span>}
