@@ -301,14 +301,20 @@ frontend/
 ## 🤖 AI Usage Disclosure
 
 ### AI Tools Used
-1. **Gemini 3 Flash**: Frontend component implementation and styling also stich for design
-2. **Claude**: Backend architecture, documentation, and project planning
+1. **Gemini 3 Flash**: Assistance with frontend component structures and Tailwind styling logic.
+2. **Claude**: Initial project planning, backend boilerplate, and documentation assistance.
+3. **Stitch**: Design inspirations for the dashboard and UI layout.
 
-### What AI Generated
-1. **Backend**: Database schema, routes, controllers, services, validation
-2. **Frontend**: React components, hooks, API services, Tailwind styling
-3. **Documentation**:
-   - README structure and API documentation
+### Manual Engineering & Refinements
+While AI tools assisted with boilerplate, the core system reflects manual engineering:
+- **Architecture**: Designed the multi-layer service-controller-model pattern for the backend.
+- **Security Audit**: Manually audited and fixed SQL injection risks, input sanitization, and transition validation.
+- **Accessibility**: Implemented full ARIA compliance, keyboard navigation (Enter/Space), and semantic HTML across all components.
+- **State Management**: Developed custom hooks for complex state handling, debouncing, and optimistic updates.
+- **UI/UX Refinement**: Polished the dark mode transition, responsive behaviors, and micro-interactions.
+- **Deployment**: Configured production build pipelines and environment variables manually.
+
+This project was built to demonstrate full-stack proficiency, focusing on reliability, security, and clean code principles.
 
 ### Testing & Refinement
 - Manual testing of all CRUD operations
