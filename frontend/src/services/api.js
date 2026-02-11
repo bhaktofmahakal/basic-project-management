@@ -18,8 +18,8 @@ api.interceptors.response.use(
   }
 );
 
-export const fetchProjects = async (params = {}) => {
-  const response = await api.get('/projects', { params });
+export const fetchProjects = async (params = {}, options = {}) => {
+  const response = await api.get('/projects', { params, ...options });
   return response.data;
 };
 
