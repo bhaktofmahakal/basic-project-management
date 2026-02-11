@@ -15,6 +15,14 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    version: '1.0.0'
+  });
+});
+
 app.use('/api/projects', projectRoutes);
 
 app.use(errorHandler);
