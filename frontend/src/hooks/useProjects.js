@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { fetchProjects } from '../services/api';
 
 export const useProjects = () => {
@@ -18,7 +18,17 @@ export const useProjects = () => {
     totalPages: 0,
   });
 
+  const abortControllerRef = useRef(null);
+
   const fetchData = useCallback(async () => {
+    // Abort previous request
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+
     try {
       setLoading(true);
       setError(null);
@@ -31,22 +41,31 @@ export const useProjects = () => {
       params.page = filters.page.toString();
       params.limit = filters.limit.toString();
 
-      const data = await fetchProjects(params);
+      const data = await fetchProjects(params, { signal: controller.signal });
+      
       setProjects(data.projects);
       setPagination({
         total: data.total,
         totalPages: data.totalPages,
       });
     } catch (err) {
+      if (err.name === 'AbortError') return;
       setError(err.message);
       setProjects([]);
     } finally {
-      setLoading(false);
+      if (abortControllerRef.current === controller) {
+        setLoading(false);
+      }
     }
   }, [filters]);
 
   useEffect(() => {
     fetchData();
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
   }, [fetchData]);
 
   const updateFilters = useCallback((newFilters) => {
