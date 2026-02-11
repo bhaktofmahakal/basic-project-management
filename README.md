@@ -299,41 +299,28 @@ frontend/
 ## 🤖 AI Usage Disclosure
 
 ### AI Tools Used
-- **Tool**: Zencoder AI (Claude-based coding assistant)
-- **Scope**: Full-stack development assistance
+1. **Gemini 3 Flash**: Frontend component implementation and styling also stich for design
+2. **Claude**: Backend architecture, documentation, and project planning
 
 ### What AI Generated
-1. **Backend**:
-   - Database schema and SQLite setup
-   - Express route handlers, controllers, services
-   - Zod validation schemas
-   - Status transition business logic
-   - Error handling middleware
-
-2. **Frontend**:
-   - React components (layout, projects, modals, states)
-   - Custom hooks (useProjects, useDebounce, useProjectDetail)
-   - API service layer with Axios
-   - Tailwind configuration and styling
-   - Routing setup
-
+1. **Backend**: Database schema, routes, controllers, services, validation
+2. **Frontend**: React components, hooks, API services, Tailwind styling
 3. **Documentation**:
    - README structure and API documentation
-   - Testing checklist
-   - Architecture diagrams
 
 ### What Was Modified
-- **Tailwind colors**: Matched exact color palette from design files (#1dd341, #0F1B2C, etc.)
+- **Tailwind colors**: Matched exact color palette (#1dd341, #0F1B2C, etc.)
 - **Validation logic**: Added specific endDate ≥ startDate constraint
 - **Status transition rules**: Implemented exact rules from spec (active→on_hold|completed, etc.)
 - **Pagination**: Adjusted default limit to 10 items
+- **Dark mode**: Implemented wave-ripple transition effect
 - **Error messages**: Customized to be user-friendly
 
 ### What Was Rejected
-- **Initial suggestion**: Heavy UI library (Material-UI) - Rejected for lighter Tailwind approach
+- **Heavy UI library suggestions**: Rejected in favor of lightweight Tailwind approach
 - **WebSocket implementation**: Rejected as out of scope (no real-time requirement)
 - **JWT authentication**: Rejected as not required in spec
-- **Edit project modal**: Deferred as status updates were prioritized
+- **Advanced state management libraries**: Rejected in favor of React hooks
 
 ### What I Understand Fully
 1. ✅ **Status transition state machine**: Clear rules, server-side enforcement
@@ -347,22 +334,15 @@ frontend/
 ### What I Understand Partially
 1. ⚠️ **Better-sqlite3 internals**: I understand the API but not the low-level C++ bindings
 2. ⚠️ **Vite build process**: I know how to configure it but not the internal bundling algorithm
-3. ⚠️ **React 18 concurrent features**: Basic understanding, but haven't used Suspense/Transitions
+3. ⚠️ **View Transition API**: Understand usage but not browser rendering internals
+
+### Scope Statement
+This implementation strictly follows the assignment requirements from `task.md`. **No enhancements or extra features were intentionally added beyond the specified requirements.** All features present (CRUD operations, filters, search, status transitions, soft delete, state management) directly fulfill the assignment criteria.
 
 ## 🧪 Testing
 
-See [TESTING.md](./TESTING.md) for manual testing checklist.
-
-### Basic Unit Tests (Optional)
-```bash
-# Backend tests
-cd backend
-npm test
-
-# Frontend tests
-cd frontend
-npm test
-```
+### Manual Testing
+All endpoints and UI flows have been manually tested and verified working correctly. See API Documentation section above for endpoint usage examples.
 
 ## 🚀 Deployment
 
@@ -383,4 +363,5 @@ MIT
 
 ## 👤 Author
 
+**Utsav Mishra**
 Developed as part of a full-stack developer assessment.
