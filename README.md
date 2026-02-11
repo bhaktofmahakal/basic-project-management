@@ -324,16 +324,22 @@ All endpoints and UI flows have been manually tested and verified working correc
 
 ## 🚀 Deployment
 
+### Live Demo
+**Frontend**: [https://frontend-two-swart-52.vercel.app](https://frontend-two-swart-52.vercel.app)
+
 ### Backend (Example: Railway/Render)
 1. Add environment variables: `PORT`, `NODE_ENV=production`
 2. Build command: `npm install`
 3. Start command: `npm start`
 4. Add PostgreSQL if needed (migrate from SQLite)
 
-### Frontend (Example: Vercel/Netlify)
-1. Build command: `npm run build`
-2. Output directory: `dist`
-3. Environment variable: `VITE_API_URL=<backend-url>`
+### Frontend (Vercel)
+Deployed using Vercel CLI:
+```bash
+cd frontend
+vercel --prod
+```
+Configuration in `vercel.json`
 
 ## 📝 License
 
