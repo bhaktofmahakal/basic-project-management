@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "framework": "vite",
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "regions": ["iad1"]
+}
