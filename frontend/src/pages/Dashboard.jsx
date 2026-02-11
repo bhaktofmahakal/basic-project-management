@@ -78,7 +78,7 @@ export const Dashboard = () => {
 
   return (
     <Layout 
-      title="Project Overview"
+      title="Project Dashboard"
       searchValue={searchInput}
       onSearchChange={setSearchInput}
     >
