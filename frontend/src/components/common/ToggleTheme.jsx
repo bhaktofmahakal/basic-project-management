@@ -65,8 +65,8 @@ export const ToggleTheme = ({
     const x = left + width / 2;
     const y = top + height / 2;
     const maxRadius = Math.hypot(
-      Math.max(left, window.innerWidth - left),
-      Math.max(top, window.innerHeight - top)
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
     );
 
     switch (animationType) {
