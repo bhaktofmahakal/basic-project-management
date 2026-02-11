@@ -1,14 +1,24 @@
+import React, { useId } from 'react';
+
 export const Input = ({ 
   label, 
   error, 
   icon,
   className = '',
+  id: propsId,
   ...props 
 }) => {
+  const generatedId = useId();
+  const id = propsId || generatedId;
+  const errorId = `${id}-error`;
+
   return (
     <div className={`${className}`}>
       {label && (
-        <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
+        <label 
+          htmlFor={id}
+          className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+        >
           {label}
         </label>
       )}
@@ -19,12 +29,21 @@ export const Input = ({
           </span>
         )}
         <input
+          id={id}
           className={`input-field ${icon ? 'pl-10' : ''} ${error ? 'border-red-500 focus:ring-red-500' : ''}`}
+          aria-invalid={!!error}
+          aria-describedby={error ? errorId : undefined}
           {...props}
         />
       </div>
       {error && (
-        <p className="mt-1 text-sm text-red-600 dark:text-red-400">{error}</p>
+        <p 
+          id={errorId}
+          role="alert"
+          className="mt-1 text-sm text-red-600 dark:text-red-400"
+        >
+          {error}
+        </p>
       )}
     </div>
   );
