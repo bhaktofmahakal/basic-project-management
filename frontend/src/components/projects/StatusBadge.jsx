@@ -1,8 +1,8 @@
 export const StatusBadge = ({ status }) => {
   const statusConfig = {
     active: {
-      label: 'In Progress',
-      classes: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-200',
+      label: 'Active',
+      classes: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200',
     },
     on_hold: {
       label: 'On Hold',
