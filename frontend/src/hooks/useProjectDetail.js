@@ -7,7 +7,10 @@ export const useProjectDetail = (id) => {
   const [error, setError] = useState(null);
 
   const fetchData = useCallback(async () => {
-    if (!id) return;
+    if (!id) {
+      setLoading(false);
+      return;
+    }
 
     try {
       setLoading(true);
