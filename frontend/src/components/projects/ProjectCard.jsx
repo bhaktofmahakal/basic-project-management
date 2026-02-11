@@ -25,6 +25,7 @@ export const ProjectCard = ({ project, onClick, onDelete }) => {
           <p className="text-sm text-slate-600 dark:text-slate-400">
             {project.clientName}
           </p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 italic mt-1">Click for details</p>
         </div>
         <StatusBadge status={project.status} />
       </div>
