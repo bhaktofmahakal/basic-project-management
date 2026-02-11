@@ -1,18 +1,28 @@
+import React, { useId } from 'react';
+
 export const Select = ({ 
   label, 
   options = [], 
   error, 
   className = '',
+  id: propsId,
   ...props 
 }) => {
+  const generatedId = useId();
+  const id = propsId || generatedId;
+
   return (
     <div className={`${className}`}>
       {label && (
-        <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
+        <label 
+          htmlFor={id}
+          className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+        >
           {label}
         </label>
       )}
       <select
+        id={id}
         className={`input-field ${error ? 'border-red-500 focus:ring-red-500' : ''}`}
         {...props}
       >
