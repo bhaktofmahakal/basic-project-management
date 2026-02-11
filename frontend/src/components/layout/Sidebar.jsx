@@ -56,12 +56,12 @@ export const Sidebar = ({ isOpen, onClose }) => {
                 key={index}
                 {...(isPlaceholder ? { type: 'button', disabled: true } : { to: item.path })}
                 className={`
-                  w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group
+                  w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group
                   ${isActive 
-                    ? 'bg-primary/10 text-primary' 
+                    ? 'bg-primary/10 text-primary scale-[1.02]' 
                     : 'text-slate-400'
                   }
-                  ${!isPlaceholder ? 'hover:text-white hover:bg-white/5' : 'cursor-default opacity-60'}
+                  ${!isPlaceholder ? 'hover:text-white hover:bg-white/5 hover:translate-x-1' : 'cursor-default opacity-60'}
                 `}
                 onClick={!isPlaceholder ? onClose : undefined}
               >
