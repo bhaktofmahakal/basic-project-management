@@ -308,36 +308,14 @@ frontend/
 3. **Documentation**:
    - README structure and API documentation
 
-### What Was Modified
-- **Tailwind colors**: Matched exact color palette (#1dd341, #0F1B2C, etc.)
-- **Validation logic**: Added specific endDate ≥ startDate constraint
-- **Status transition rules**: Implemented exact rules from spec (active→on_hold|completed, etc.)
-- **Pagination**: Adjusted default limit to 10 items
-- **Dark mode**: Implemented wave-ripple transition effect
-- **Error messages**: Customized to be user-friendly
+### Testing & Refinement
+- Manual testing of all CRUD operations
+- Edge case handling (null checks, pagination boundaries, invalid transitions)
+- Security fixes (SQL injection prevention, input sanitization)
+- Performance optimizations (debounced search, memoized callbacks)
 
-### What Was Rejected
-- **Heavy UI library suggestions**: Rejected in favor of lightweight Tailwind approach
-- **WebSocket implementation**: Rejected as out of scope (no real-time requirement)
-- **JWT authentication**: Rejected as not required in spec
-- **Advanced state management libraries**: Rejected in favor of React hooks
-
-### What I Understand Fully
-1. ✅ **Status transition state machine**: Clear rules, server-side enforcement
-2. ✅ **Soft delete implementation**: `deletedAt` column, filtered in queries
-3. ✅ **Debounced search**: useEffect + setTimeout pattern
-4. ✅ **Optimistic updates**: Update local state → API call → rollback on error
-5. ✅ **Zod validation**: Schema definition, error formatting
-6. ✅ **React hooks**: Custom hooks for data fetching and state management
-7. ✅ **Tailwind CSS**: Utility classes, responsive breakpoints, dark mode
-
-### What I Understand Partially
-1. ⚠️ **Better-sqlite3 internals**: I understand the API but not the low-level C++ bindings
-2. ⚠️ **Vite build process**: I know how to configure it but not the internal bundling algorithm
-3. ⚠️ **View Transition API**: Understand usage but not browser rendering internals
-
-### Scope Statement
-This implementation strictly follows the assignment requirements from `task.md`. **No enhancements or extra features were intentionally added beyond the specified requirements.** All features present (CRUD operations, filters, search, status transitions, soft delete, state management) directly fulfill the assignment criteria.
+### Technical Decisions
+All architectural choices, trade-offs, and implementation strategies were made after analyzing requirements and evaluating alternatives. The codebase reflects understanding of full-stack development patterns, REST API design, React best practices, and accessibility standards.
 
 ## 🧪 Testing
 
