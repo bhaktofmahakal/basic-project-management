@@ -309,7 +309,7 @@ frontend/
 
 ### AI Tools Used
 1. **Gemini 3 Flash**: Assistance with frontend component structures and Tailwind styling logic.
-2. **Claude**: Initial project planning, backend boilerplate, and documentation assistance.
+2. **Claude**: Initial project planning, backend boilerplate, and documentation assistance and last audit.
 3. **Stitch**: Design inspirations for the dashboard and UI layout.
 
 ### Manual Engineering & Refinements
