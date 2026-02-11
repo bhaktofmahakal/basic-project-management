@@ -7,15 +7,15 @@ const STATUS_TRANSITIONS = {
 };
 
 class ProjectService {
-  static createProject(data) {
+  static async createProject(data) {
     return Project.create(data);
   }
 
-  static getProjects(query) {
+  static async getProjects(query) {
     return Project.findAll(query);
   }
 
-  static getProjectById(id) {
+  static async getProjectById(id) {
     const project = Project.findById(id);
     if (!project) {
       throw new Error('Project not found');
@@ -23,7 +23,7 @@ class ProjectService {
     return project;
   }
 
-  static updateProjectStatus(id, newStatus) {
+  static async updateProjectStatus(id, newStatus) {
     const project = Project.findById(id);
     
     if (!project) {
@@ -42,7 +42,7 @@ class ProjectService {
     return Project.updateStatus(id, newStatus);
   }
 
-  static deleteProject(id) {
+  static async deleteProject(id) {
     const project = Project.findById(id);
     
     if (!project) {
