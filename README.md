@@ -14,8 +14,6 @@ A full-stack project management application built with Node.js/Express and React
 - **Optimistic Updates**: Instant UI feedback with rollback on error
 - **Debounced Search**: 300ms delay to reduce API calls
 
-<img width="1919" height="856" alt="image" src="https://github.com/user-attachments/assets/dbf57d40-4b76-41f8-8294-e61338a010e5" />
-
 ## 📋 Prerequisites
 
 - Node.js 18+ and npm
