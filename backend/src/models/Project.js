@@ -71,6 +71,12 @@ class Project {
   }
 
   static updateStatus(id, newStatus) {
+    const ALLOWED_STATUSES = ['active', 'on_hold', 'completed'];
+    
+    if (!ALLOWED_STATUSES.includes(newStatus)) {
+      throw new Error(`Invalid status: ${newStatus}`);
+    }
+    
     const now = new Date().toISOString();
     const stmt = db.prepare(`
       UPDATE projects 
