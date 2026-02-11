@@ -9,8 +9,8 @@ export const EmptyState = ({ onCreateClick }) => {
       <h3 className="text-2xl font-semibold mb-2 text-slate-800 dark:text-slate-200">
         No Projects Yet
       </h3>
-      <p className="text-slate-600 dark:text-slate-400 mb-6 text-center max-w-md">
-        Get started by creating your first project. Track progress, manage deadlines, and collaborate with your team.
+      <p className="text-slate-600 dark:text-slate-400 mb-8 text-center max-w-md">
+        Get started by creating your first project. Organize your workspace, manage client expectations, and track milestones effectively.
       </p>
       <Button variant="primary" icon="add" onClick={onCreateClick}>
         Create Your First Project
