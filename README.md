@@ -1,4 +1,4 @@
-# ProjectFlow - Project Tracking System
+# Project Tracking System
 
 A full-stack project management application built with Node.js/Express and React.
 
@@ -13,6 +13,8 @@ A full-stack project management application built with Node.js/Express and React
 - **State Management**: Loading, empty, error, and no-results states
 - **Optimistic Updates**: Instant UI feedback with rollback on error
 - **Debounced Search**: 300ms delay to reduce API calls
+- 
+<img width="1918" height="853" alt="image" src="https://github.com/user-attachments/assets/13924a06-da8d-4330-86fd-d0c778636c4c" />
 
 ## 📋 Prerequisites
 
