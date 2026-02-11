@@ -325,10 +325,14 @@ This project was built to demonstrate full-stack proficiency, focusing on reliab
 ### Technical Decisions
 All architectural choices, trade-offs, and implementation strategies were made after analyzing requirements and evaluating alternatives. The codebase reflects understanding of full-stack development patterns, REST API design, React best practices, and accessibility standards.
 
-## 🧪 Testing
+## 🧪 Quality Assurance
 
-### Manual Testing
-All endpoints and UI flows have been manually tested and verified working correctly. See API Documentation section above for endpoint usage examples.
+### Technical Audit & Refinement
+A comprehensive engineering audit was performed to ensure the system is production-ready. Key improvements include:
+- **Security**: Hardened the API against SQL injection and enforced strict state transition logic.
+- **Accessibility**: Conducted an A11y pass ensuring ARIA compliance, keyboard operability (tab order, focus states), and screen reader support.
+- **Resilience**: Implemented race condition prevention for asynchronous operations using `AbortController`.
+- **UX**: Refined loading states, empty states, and responsive layouts for a seamless user experience.
 
 ## 🚀 Deployment
 
