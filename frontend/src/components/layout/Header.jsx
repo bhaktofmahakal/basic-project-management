@@ -35,7 +35,10 @@ export const Header = ({ title, onMenuClick, searchValue, onSearchChange }) => {
         
         <ToggleTheme animationType="wave-ripple" duration={600} />
         
-        <button className="relative p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+        <button 
+          aria-label="View notifications"
+          className="relative p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
+        >
           <span className="material-icons">notifications_none</span>
           <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-surface-dark"></span>
         </button>
