@@ -31,7 +31,12 @@ export const DeleteConfirmModal = ({ isOpen, project, onClose, onSuccess }) => {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white dark:bg-surface-dark rounded-xl shadow-2xl max-w-md w-full">
+      <div 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="delete-modal-title"
+        className="bg-white dark:bg-surface-dark rounded-xl shadow-2xl max-w-md w-full"
+      >
         <div className="p-6">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center flex-shrink-0">
@@ -40,7 +45,7 @@ export const DeleteConfirmModal = ({ isOpen, project, onClose, onSuccess }) => {
               </span>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+              <h2 id="delete-modal-title" className="text-xl font-bold text-slate-900 dark:text-slate-100">
                 Delete Project?
               </h2>
             </div>
