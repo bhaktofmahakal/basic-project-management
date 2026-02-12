@@ -16,6 +16,9 @@ A full-stack project management application built with Node.js/Express and React
 - 
 <img width="1918" height="853" alt="image" src="https://github.com/user-attachments/assets/13924a06-da8d-4330-86fd-d0c778636c4c" />
 
+<img width="1898" height="633" alt="image" src="https://github.com/user-attachments/assets/2aadb8c4-d2a5-4fc1-800a-d7c2e3cdb4c2" />
+
+
 ## 📋 Prerequisites
 
 - Node.js 18+ and npm
